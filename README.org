@@ -13,7 +13,8 @@ After downloading and unzipping the Benchmark directory, there are 2 primary fol
   - The MATLAB code is to load the alignment/histograms files and evaluate the statistics.
   - There are 3 Perl scripts.
 ** Compilation and installation
-  - =cd Dist=
+  - =git clone https://github.com/TulsaBioinformaticsToolsmith/Alignment-Free-Kmer-Statistics/=
+  - =cd Alignment-Free-Kmer-Statistics=
   - =./install.pl=
   - =cd Cpp/Align=
   - =CXX=g++-7 make= or just =make= if GNU g++ is the default compiler
@@ -52,7 +53,9 @@ After downloading and unzipping the Benchmark directory, there are 2 primary fol
 			           	- exp3 is the K Nearest Neighbor experiment
 - Replicating the Review Paper Results
 	- After opening the MATLAB code with your MATLAB (R2017a), simply run the following script in the command window:
-		> =Review_Paper_Results(output_dir)=
+	  #+BEGIN_SRC matlab
+		> Review_Paper_Results(output_dir)
+	  #+END_SRC
 	- Here, =output_dir= is the path to the output directory where the Results will be created.
 
 	-This will load the data from the workspace =Example_Data.mat= and run each of the experiments with the same parameters used in the paper.
