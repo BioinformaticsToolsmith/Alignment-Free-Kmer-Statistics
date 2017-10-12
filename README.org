@@ -54,7 +54,7 @@ After downloading and unzipping the Benchmark directory, there are 2 primary fol
 - Replicating the Review Paper Results
 	- After opening the MATLAB code with your MATLAB (R2017a), simply run the following script in the command window:
 	  #+BEGIN_SRC matlab
-		> Review_Paper_Results(output_dir)
+> Review_Paper_Results('output_dir')
 	  #+END_SRC
 	- Here, =output_dir= is the path to the output directory where the Results will be created.
 
@@ -66,5 +66,5 @@ After downloading and unzipping the Benchmark directory, there are 2 primary fol
 
 	-All alignment identity score matrices have the numbers for the sequences being compared in cols 2 and 3.
 
-	-Example: see build_all_features
+	-Example: see =build_all_features=
 	=91.8976		2 	  4=   in an Alignment matrix means that sequences 2 and 4 (rows 2 and 4) in the histogram matrix have an id score of 89.76%
