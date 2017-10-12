@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+: ${DELIM:='\t'};
+if (( $# != 3 )); then
+	echo "Format: $0 folderWithSequences outputFile kmerSize"
+	exit
+fi
+alignment-tool "$1" "$2.out" "$3" $DELIM || exit 1
+export DELIM="$DELIM";
+tsv2blast.sh < "$2.out" > "$2"
+rm "$2.out"
